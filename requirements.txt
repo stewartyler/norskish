@@ -1,0 +1,6 @@
+openai
+pyperclip
+pynput
+keyring
+certifi
+py2app

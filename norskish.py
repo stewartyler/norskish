@@ -86,14 +86,11 @@ hotkey = keyboard.HotKey(
 )
 
 def for_canonical(listener, f):
-    return lambda k: f(listener.canonical(k))
+    return lambda key, _: f(listener.canonical(key))
 
 print("🇳🇴 Norskish kjører! Trykk Ctrl+Shift+C for å korrigere det som er kopiert.")
 
-with keyboard.Listener(
-    on_press=None,
-    on_release=None
-) as l:
+with keyboard.Listener(on_press=None, on_release=None) as l:
     l.on_press = for_canonical(l, hotkey.press)
     l.on_release = for_canonical(l, hotkey.release)
     l.join()

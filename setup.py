@@ -10,11 +10,11 @@ OPTIONS = {
     'plist': {
         'CFBundleName': 'Norskish',
         'CFBundleDisplayName': 'Norskish',
-        'CFBundleIdentifier': 'com.yourname.norskish',
+        'CFBundleIdentifier': 'com.tylerstewart.norskish',
         'CFBundleVersion': '0.1',
         'LSUIElement': True,  # Hides dock icon and app switcher entry
     },
-    'packages': ['openai', 'pyperclip', 'pynput', 'dotenv', 'keyring'],
+    'packages': ['openai', 'pyperclip', 'pynput', 'keyring', 'certifi'],
 }
 
 setup(
